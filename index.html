@@ -3,33 +3,56 @@
 <head>
     <title>Yongting Shi's Portfolio</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel= "stylesheet" href="css/index.css" >
 </head>
 <body>
-    <h1>Yongting Shi</h1>
-    <section id = "About">
+  <div class="name-and-pic">
+  <h1>Yongting Shi</h1>
+  <img src="Image/mypic.JPG" alt="my pciture" class="mypic">
+  </div>  
+
+    <section id = "about">
         <h2>About</h2>
         <p>Hi, my name is Yongting, and you can call me Tina. I graduated from Florida Atlantic University (FAU) with a Bachelor's degree in Economics and a minor in Business Analytics. Throughout my academic journey, I developed expertise in marketing and economics, with a strong focus on identifying key trends and relationships to support data-driven decision-making.  </p>
         <p>Currently, I work as an independent contractor, helping small businesses increase their visibility within the community. I specialize in marketing through social media and website SEO strategies. I am excited to expand my skill set by learning coding through Code the Dream. </p>
         
     </section>
-    <section id="Experience">
-        <h2>Experience</h2>
+
+    <section class="two-columns">
+    <div class="column" id="skill">
+        <h2>Skill</h2>
         <ul>
-            <li>Database Management: SQL</li> 
-            <li>Data Visualization: Tableau </li>
-            <li>Programming: JavaScript, HTML</li>
-            <li>
-                <a href="https://www.naturepoweracu.com">Website Designed Using Square Space</a>
-            </li>
+            <li><strong>Management</strong>: SQL</li> 
+            <li><strong>Data Visualization</strong>: Tableau </li>
+            <li><strong>Programming</strong>: JavaScript, HTML, CSS</li>
         </ul>
-    </section>
-    <section id="Connect">
-        <h2>Connect</h2>
-        <p>please connect with me</p>
+    </div>
+    <div class="column" id="experience">
+      <h2>Experience</h2>
         <ul>
-            <li><a href="https://www.linkedin.com/in/yongting-shi-668347203">Linkedin</a> </li>
-            <li><a href="https://github.com/yongtingshi657/Yongting-shi-kepler.git">GitHub</a></li>
+            <li>
+              <a href="https://www.naturepoweracu.com"> <strong>Website Design</strong>: Nature Power Acupuncture</a>
+            </li>
+    </div>
+    </section>
+
+
+    <section id="connect">
+      <h2>Connect</h2>
+      <p>Please connect with me</p>
+      <ul>
+        <li class="icon-li">
+          <img src="Image/linkedIn.png" alt="LinkedIn icon" class="icon-pic">
+          <a href="https://www.linkedin.com/in/yongting-shi-668347203">LinkedIn</a>
+        </li >
+        <li class="icon-li">
+          <img src="Image/github-mark.png" alt="GitHub icon" class="icon-pic">
+        <a href="https://github.com/yongtingshi657/Yongting-shi-kepler.git">GitHub</a>
+      </li>
         </ul>
     </section>
 </body>
