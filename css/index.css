@@ -8,7 +8,10 @@ body {
 }
 
 /* -------------------header ----------------------*/
-
+/* desktop view 
+yellow text
+no border 
+yellow nav bar*/
 .name-and-pic {
   display: flex;
   align-items: center; /* vertically center the image with the text */
@@ -39,12 +42,18 @@ body {
   /* letter outline */
 }
 
+/* phone view */
+/* green border 
+  green nav bar
+  green text  */
 @media (max-width: 600px) {
   .name-and-pic {
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    border: solid rgb(93, 141, 106) 20px;
+    border: dotted rgb(93, 141, 106) 10px;
+    border-top: none;
+    margin-top: 0;
     margin-left: 2rem;
   }
   .mypic {
@@ -56,13 +65,38 @@ body {
     max-width: 90%;
     font-size: 3rem;
     padding: 1rem;
+    color:green;
+  }
+}
+/* tablet view */
+/* pink border 
+  pink nav bar 
+  pink text*/
+
+@media (min-width:601px) and (max-width: 820px) {
+  .name-and-pic {
+    align-items: center;
+    padding: 1rem;
+    border: dotted rgb(232, 206, 223) 15px;
+    margin-left: 2rem;
+  }
+  .mypic {
+    max-width: 25%;
+    margin-bottom: 1rem;
+  }
+
+  .name {
+    max-width: 90%;
+    font-size: 4rem;
+    padding: 1.5rem;
+    color: lightcoral;
   }
 }
 
 /* navigation menu  */
 
 .navmenu {
-  background-color: rgb(197, 142, 142);
+  background-color: rgb(225, 205, 100);
   padding: 0;
   margin: 0;
   top: 0;
@@ -87,6 +121,10 @@ body {
   color: black;
 }
 
+/* phone view */
+/* green border 
+  green nav bar
+  green text  */
 @media (max-width: 600px){
   .navmenu a {
     padding: 12px;
@@ -94,15 +132,34 @@ body {
   }
   .navmenu a:hover,
   .navmenu a:focus{
-    color: rgb(129, 73, 24);
+    color: rgb(133, 200, 106);
     text-decoration: underline; 
   }
 .navmenu {
-  background-color: rgb(220, 135, 39);
+  background-color: rgb(158, 219, 130);
   font-weight: bolder;
   }
 }
 
+/* tablet view */
+/* pink border 
+  pink nav bar */
+
+  @media (min-width:601px) and (max-width: 820px){
+  .navmenu a {
+    padding: 12px;
+    font-size: 10px;
+  }
+  .navmenu a:hover,
+  .navmenu a:focus{
+    color: rgb(133, 200, 106);
+    text-decoration: underline; 
+  }
+.navmenu {
+  background-color: rgb(197, 142, 142);
+  font-weight: bolder;
+  }
+}
 
 /* navigation menu  */
 
