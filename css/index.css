@@ -1,134 +1,199 @@
-
+/* Layout */
+/* desktop view */
 body {
   background-color: #e0f7ea;
   color: rgb(69, 56, 56);
   font-family: "Montserrat", sans-serif;
-  margin-left: 0px;
+  margin: 0;
 }
 
-section {
-  margin: 20px 100px;
-  padding: 20px 40px;
-  border: 2px solid rgb(110, 182, 16);
-  border-radius: 25px;
-  text-align: center;
-}
-
-h2 {
-  font-size: 28px;
-  background-color: rgb(76, 161, 110);
-  color: white;
-  padding: 10px 10px;
-  border-radius: 8px;
-  display: inline-block;
-  margin-bottom: 5px;
-}
+/* -------------------header ----------------------*/
 
 .name-and-pic {
   display: flex;
   align-items: center; /* vertically center the image with the text */
   justify-content: space-between;
+  margin: 4rem auto 2rem;
+  width: 80%;
 }
 
 .mypic {
-  width: 200px;
+  max-width: 25%;
   height: auto;
   border-radius: 50%;
 }
 
-h1 {
+.name {
+  max-width: 60%;
   color: rgb(246, 248, 163);
-  font-size: 70px;
+  font-size: 5rem;
   font-weight: 200;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 40px;
   border: 2px solid #817e7e;
-  margin: 20px 100px;
-  padding: 40px;
+  margin: 1rem;
+  padding: 3rem;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000; 
-    /* letter outline */
+    1px 1px 0 #000;
+  /* letter outline */
 }
 
-a {
-  color: rgb(69, 56, 56);
+@media (max-width: 600px) {
+  .name-and-pic {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border: solid rgb(93, 141, 106) 20px;
+    margin-left: 2rem;
+  }
+  .mypic {
+    max-width: 50%;
+    margin-bottom: 1rem;
+  }
+
+  .name {
+    max-width: 90%;
+    font-size: 3rem;
+    padding: 1rem;
+  }
 }
 
 /* navigation menu  */
+
 .navmenu {
   background-color: rgb(197, 142, 142);
-  padding: 0px;
-  margin: 0px;
-  top:0;
+  padding: 0;
+  margin: 0;
+  top: 0;
   list-style-type: none;
-  overflow:hidden;
-  display:flex;
+  overflow: hidden;
+  display: flex;
   position: fixed;
   width: 100%;
   justify-content: space-evenly;
- 
-  
 }
 
-.navmenu a{
+.navmenu a {
   text-decoration: none;
-  color:whitesmoke;
+  color: whitesmoke;
   padding: 15px;
   display: block;
   text-align: center;
 }
 
-.navmenu a:hover{
-  color: rgb(130, 39, 39);
+.navmenu a:hover,
+.navmenu a:focus{
+  color: black;
+}
 
+@media (max-width: 600px){
+  .navmenu a {
+    padding: 12px;
+    font-size: 10px;
+  }
+  .navmenu a:hover,
+  .navmenu a:focus{
+    color: rgb(129, 73, 24);
+    text-decoration: underline; 
+  }
+.navmenu {
+  background-color: rgb(220, 135, 39);
+  font-weight: bolder;
+  }
 }
-.navmenu li{
-  float:left;
-}
+
+
 /* navigation menu  */
 
+/* ----------------------header-------------------------- */
 
-/* about */
-#about p{
-    text-align: left;
+/* --------------------sections ------------------------- */
+main {
+  margin: 2rem auto;
+  width:80%;
 }
 
+section {
+  margin: 1rem auto;
+  padding: 1rem 2rem;
+  border: 2px solid rgb(110, 182, 16);
+  border-radius: 25px;
+  text-align: center;
+  width: 100%;
+}
+
+h2 {
+  font-size: 2rem;
+  background-color: rgb(76, 161, 110);
+  color: white;
+  padding: 1rem 1rem;
+  border-radius: 8px;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+main {
+  width: 90%;
+}
+
+/* about */
+#about p {
+  text-align: left;
+}
 
 /* experience */
+a {
+  color: rgb(69, 56, 56);
+}
+
 .columns {
   display: flex;
   margin: auto;
   justify-content: space-between;
   text-align: left;
-  gap: 10px;
+  gap: 1rem;
 }
 
-
-
-.column{
-  padding:10px;
-  margin: 10px 10px;
+.column {
+  flex: 1;
+  padding: 1rem;
+  margin:0.5rem;
   border: rgb(102, 129, 102) 2px solid;
-  width:400px;
 }
 
+.experience-skills {
+  list-style: square;
+}
 
+@media (max-width: 600px) {
+  .columns {
+    display: flex;
+    flex-direction: column;
+  }
+  .column {
+    width: 80%;
+    margin: 0.5rem auto;
+  }
+  #about p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
 
 /* connect section */
 #connect ul {
   list-style: none; /* Remove default list bullets */
-  padding: 0; 
+  padding: 0;
   display: flex; /* Make the list items flexible */
   justify-content: center; /* Center the items horizontally */
-  gap: 20px; /* Add space between list items */
-  align-items: center; 
+  gap: 2rem; /* Add space between list items */
+  align-items: center;
 }
 .icon-pic {
-  width: 24px;
-  height: 24px;
+  width: 2rem;
+  height: 2rem;
   vertical-align: middle;
-  margin-right: 8px;
+  margin-right: 1rem;
 }
 
 .icon-li {
