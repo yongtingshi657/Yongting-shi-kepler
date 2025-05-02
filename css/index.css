@@ -1,7 +1,9 @@
+
 body {
   background-color: #e0f7ea;
   color: rgb(69, 56, 56);
   font-family: "Montserrat", sans-serif;
+  margin-left: 0px;
 }
 
 section {
@@ -53,22 +55,65 @@ a {
   color: rgb(69, 56, 56);
 }
 
+/* navigation menu  */
+.navmenu {
+  background-color: rgb(197, 142, 142);
+  padding: 0px;
+  margin: 0px;
+  top:0;
+  list-style-type: none;
+  overflow:hidden;
+  display:flex;
+  position: fixed;
+  width: 100%;
+  justify-content: space-evenly;
+ 
+  
+}
+
+.navmenu a{
+  text-decoration: none;
+  color:whitesmoke;
+  padding: 15px;
+  display: block;
+  text-align: center;
+}
+
+.navmenu a:hover{
+  color: rgb(130, 39, 39);
+
+}
+.navmenu li{
+  float:left;
+}
+/* navigation menu  */
+
+
+/* about */
 #about p{
     text-align: left;
 }
 
-/* experience and skill section */
-.two-columns {
+
+/* experience */
+.columns {
   display: flex;
+  margin: auto;
   justify-content: space-between;
+  text-align: left;
+  gap: 10px;
 }
 
-#skill li,
-#experience li {
-  padding: 12px 16px;
-  list-style: square;
-  width: fit-content;
+
+
+.column{
+  padding:10px;
+  margin: 10px 10px;
+  border: rgb(102, 129, 102) 2px solid;
+  width:400px;
 }
+
+
 
 /* connect section */
 #connect ul {
