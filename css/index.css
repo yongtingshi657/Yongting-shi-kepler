@@ -1,134 +1,145 @@
-
+/* Layout */
 body {
   background-color: #e0f7ea;
   color: rgb(69, 56, 56);
   font-family: "Montserrat", sans-serif;
-  margin-left: 0px;
+  margin: 0;
+}
+
+/* -------------------header ----------------------*/
+            /* desktop view 
+            yellow text
+            no border 
+            yellow nav bar*/
+.name-and-pic {
+  display: flex;
+  align-items: center; /* vertically center the image with the text */
+  justify-content: space-between;
+  margin: 4rem auto 2rem;
+  width: 80%;
+}
+
+.mypic {
+  max-width: 25%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.name {
+  max-width: 60%;
+  color: rgb(246, 248, 163);
+  font-size: 5rem;
+  font-weight: 200;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 40px;
+  border: 2px solid #817e7e;
+  margin: 1rem;
+  padding: 3rem;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  /* letter outline */
+}
+
+/* navigation menu  */
+.navmenu {
+  background-color: rgb(225, 205, 100);
+  padding: 0;
+  margin: 0;
+  top: 0;
+  list-style-type: none;
+  overflow: hidden;
+  display: flex;
+  position: fixed;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.navmenu a {
+  text-decoration: none;
+  color: whitesmoke;
+  padding: 15px;
+  display: block;
+  text-align: center;
+}
+
+.navmenu a:hover,
+.navmenu a:focus {
+  color: black;
+}
+/* navigation menu  */
+
+/* ----------------------header-------------------------- */
+
+/* --------------------sections ------------------------- */
+/* desptop view */
+main {
+  margin: 2rem auto;
+  width: 80%;
 }
 
 section {
-  margin: 20px 100px;
-  padding: 20px 40px;
+  margin: 1rem auto;
+  padding: 1rem 2rem;
   border: 2px solid rgb(110, 182, 16);
   border-radius: 25px;
   text-align: center;
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 2rem;
   background-color: rgb(76, 161, 110);
   color: white;
-  padding: 10px 10px;
+  padding: 1rem 1rem;
   border-radius: 8px;
   display: inline-block;
-  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
 }
 
-.name-and-pic {
-  display: flex;
-  align-items: center; /* vertically center the image with the text */
-  justify-content: space-between;
+/* about */
+#about p {
+  text-align: left;
 }
 
-.mypic {
-  width: 200px;
-  height: auto;
-  border-radius: 50%;
-}
-
-h1 {
-  color: rgb(246, 248, 163);
-  font-size: 70px;
-  font-weight: 200;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 40px;
-  border: 2px solid #817e7e;
-  margin: 20px 100px;
-  padding: 40px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000; 
-    /* letter outline */
-}
-
+/* experience */
 a {
   color: rgb(69, 56, 56);
 }
 
-/* navigation menu  */
-.navmenu {
-  background-color: rgb(197, 142, 142);
-  padding: 0px;
-  margin: 0px;
-  top:0;
-  list-style-type: none;
-  overflow:hidden;
-  display:flex;
-  position: fixed;
-  width: 100%;
-  justify-content: space-evenly;
- 
-  
-}
-
-.navmenu a{
-  text-decoration: none;
-  color:whitesmoke;
-  padding: 15px;
-  display: block;
-  text-align: center;
-}
-
-.navmenu a:hover{
-  color: rgb(130, 39, 39);
-
-}
-.navmenu li{
-  float:left;
-}
-/* navigation menu  */
-
-
-/* about */
-#about p{
-    text-align: left;
-}
-
-
-/* experience */
 .columns {
   display: flex;
   margin: auto;
   justify-content: space-between;
   text-align: left;
-  gap: 10px;
+  gap: 1rem;
 }
 
-
-
-.column{
-  padding:10px;
-  margin: 10px 10px;
+.column {
+  flex: 1;
+  padding: 1rem;
+  margin: 0.5rem;
   border: rgb(102, 129, 102) 2px solid;
-  width:400px;
 }
 
+.experience-skills {
+  list-style: square;
+}
 
 
 /* connect section */
 #connect ul {
-  list-style: none; /* Remove default list bullets */
-  padding: 0; 
-  display: flex; /* Make the list items flexible */
-  justify-content: center; /* Center the items horizontally */
-  gap: 20px; /* Add space between list items */
-  align-items: center; 
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
 }
 .icon-pic {
-  width: 24px;
-  height: 24px;
+  width: 2rem;
+  height: 2rem;
   vertical-align: middle;
-  margin-right: 8px;
+  margin-right: 1rem;
 }
 
 .icon-li {
@@ -136,3 +147,145 @@ a {
   align-items: center;
   text-align: center;
 }
+
+/* ------------------desktop view done----------------- */
+
+/* ----------------phone view---------------------*/
+/*  green nav bar */
+  @media (max-width: 600px) {
+    .navmenu a {
+      padding: 12px;
+      font-size: 0.8rem;
+    }
+    .navmenu a:hover,
+    .navmenu a:focus {
+      color: black;
+      text-decoration: none;
+    }
+    .navmenu {
+      background-color: rgb(121, 169, 98);
+      font-weight: bolder;
+    }
+  }
+
+/* green border 
+  green text  */
+@media (max-width: 600px) {
+  .name-and-pic {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border: dotted rgb(93, 141, 106) 10px;
+    border-top: none;
+    margin-top: 0.5rem;
+  }
+  .mypic {
+    max-width: 50%;
+    margin-bottom: 1rem;
+  }
+  .name {
+    max-width: 90%;
+    font-size: 3rem;
+    padding: 1rem;
+    color: green;
+  }
+}
+@media (max-width: 600px){
+  main{
+    width:95%;
+  }
+
+  section{
+    width:90%;
+    padding: 1rem;
+
+  }
+
+  #about p {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+}
+
+/* experience flex */
+@media (max-width: 600px) {
+  .columns {
+    display: flex;
+    flex-direction: column;
+  }
+  .column {
+    width: 80%;
+    font-size: 1.5rem;
+  }
+ 
+}
+/* ---------------phone view done-------------- */
+
+
+/* ---------------tablet view--------------------- */
+
+/* pink nav bar */
+  @media (min-width: 601px) and (max-width: 850px) {
+    .navmenu a {
+      padding: 12px;
+      font-size: 1.5rem;
+    }
+    .navmenu a:hover,
+    .navmenu a:focus {
+      color: rgb(55, 63, 52);
+      text-decoration:none;
+    }
+    .navmenu {
+      background-color: rgb(220, 174, 174);
+      font-weight: bolder;
+    }
+  }
+  
+ 
+/* pink border 
+  pink text*/
+@media (min-width: 601px) and (max-width: 850px) {
+  .name-and-pic {
+    align-items: center;
+    padding: 1rem;
+    border: dotted rgb(206, 180, 193) 15px;
+    margin: 1rem auto;
+    width:75%;
+  }
+  .mypic {
+    max-width: 25%;
+    margin-bottom: 1rem;
+  }
+  .name {
+    max-width: 90%;
+    font-size: 4rem;
+    padding: 1.5rem;
+    color: lightcoral;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 850px){
+  main{
+    width:80%;
+  }
+
+  section{
+    width:90%;
+  }
+
+  #about p{
+    font-size: 2rem;
+  }
+
+  .columns {
+    display: flex;
+    flex-direction: column;
+  }
+  .column {
+    width: 80%;
+    margin: 0.5rem auto;
+    font-size: 2rem
+  }
+
+}
+ /* ----------------------tablet view done------------------*/
