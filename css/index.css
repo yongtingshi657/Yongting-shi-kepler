@@ -28,7 +28,7 @@ body {
 .name {
   max-width: 60%;
   color: rgb(246, 248, 163);
-  font-size: 5rem;
+  font-size: 6rem;
   font-weight: 200;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.5);
@@ -76,6 +76,7 @@ body {
 main {
   margin: 2rem auto;
   width: 80%;
+  font-size: 2rem;
 }
 
 section {
@@ -121,10 +122,27 @@ a {
   border: rgb(102, 129, 102) 2px solid;
 }
 
-.experience-skills {
-  list-style: square;
+/* skills section  */
+#skills ul {
+  font-size: 3rem;
+  list-style:none;
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  flex-wrap: wrap;  
+  gap: 1rem;   
+  box-sizing: border-box;  
 }
 
+#skills li{
+  background-color: lightgrey;
+  padding: 1rem 1rem;
+  border-radius: 5px;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
+ 
+}
 
 /* connect section */
 #connect ul {
@@ -145,6 +163,10 @@ a {
 .icon-li {
   display: flex;
   align-items: center;
+  text-align: center;
+}
+
+footer {
   text-align: center;
 }
 
@@ -190,15 +212,15 @@ a {
     color: green;
   }
 }
+
 @media (max-width: 600px){
   main{
-    width:95%;
+    width:90%;
   }
 
   section{
-    width:90%;
-    padding: 1rem;
-
+    width:80%;
+    padding: 2rem;
   }
 
   #about p {
@@ -219,6 +241,30 @@ a {
   }
  
 }
+
+/* skills flex */
+@media (max-width: 600px){
+  #skills ul{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-self:center;
+  }
+  #skills li{
+    padding: 0.2rem 0.2rem;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px){
+  #connect ul {
+    font-size: 1.5rem;
+  }
+}
+
 /* ---------------phone view done-------------- */
 
 
@@ -288,4 +334,20 @@ a {
   }
 
 }
+
+  /* skills flex */
+  @media (min-width: 601px) and (max-width: 850px){
+    #skills ul{
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      justify-self:center;
+    }
+    #skills li{
+      padding: 0.2rem 0.2rem;
+      border-radius: 5px;
+      margin-bottom: 0.5rem;
+      display: inline-block;
+    }
+  }
  /* ----------------------tablet view done------------------*/
