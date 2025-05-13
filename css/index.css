@@ -7,7 +7,7 @@ body {
 }
 
 /* -------------------header ----------------------*/
-            /* desktop view 
+/* desktop view 
             yellow text
             no border 
             yellow nav bar*/
@@ -76,7 +76,7 @@ body {
 main {
   margin: 2rem auto;
   width: 80%;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 section {
@@ -88,7 +88,7 @@ section {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   background-color: rgb(76, 161, 110);
   color: white;
   padding: 1rem 1rem;
@@ -100,6 +100,7 @@ h2 {
 /* about */
 #about p {
   text-align: left;
+  font-size: 1.5rem;
 }
 
 /* experience */
@@ -124,24 +125,22 @@ a {
 
 /* skills section  */
 #skills ul {
-  font-size: 3rem;
-  list-style:none;
+  list-style: none;
   display: flex;
   justify-content: center;
   width: 90%;
-  flex-wrap: wrap;  
-  gap: 1rem;   
-  box-sizing: border-box;  
+  flex-wrap: wrap;
+  gap: 1rem;
+  box-sizing: border-box;
 }
 
-#skills li{
+#skills li {
   background-color: lightgrey;
   padding: 1rem 1rem;
   border-radius: 5px;
   display: inline-block;
   margin-bottom: 0.5rem;
   margin-right: 1rem;
- 
 }
 
 /* connect section */
@@ -166,6 +165,70 @@ a {
   text-align: center;
 }
 
+/* forms */
+#leave_message h2 {
+  margin-bottom: 30px;
+}
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+}
+form input,
+form textarea {
+  padding: 8px;
+  margin-bottom: 16px;
+  font-size: 2rem;
+}
+form input {
+  width: 50%;
+  height: 40px;
+}
+textarea {
+  width: 80%;
+  height: 150px;
+  font-size: 1.5rem;
+}
+form button {
+  padding: 10px 20px;
+  margin: 10px auto;
+  font-size: 1rem;
+  border: 1px solid black;
+  cursor: pointer;
+}
+form button:hover {
+  background-color: rgb(76, 161, 110);
+}
+
+/* message  */
+#messages ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.5rem;
+}
+
+#messages li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.message-content {
+  display: flex;
+  gap: 15px; 
+  align-items: center;
+  flex: 1; 
+}
+
+#messages li button {
+  margin-left: 20px;
+  padding: 5px 10px;
+  font-size: 1rem;
+}
+
+/* footer */
 footer {
   text-align: center;
 }
@@ -174,21 +237,21 @@ footer {
 
 /* ----------------phone view---------------------*/
 /*  green nav bar */
-  @media (max-width: 600px) {
-    .navmenu a {
-      padding: 12px;
-      font-size: 0.8rem;
-    }
-    .navmenu a:hover,
-    .navmenu a:focus {
-      color: black;
-      text-decoration: none;
-    }
-    .navmenu {
-      background-color: rgb(121, 169, 98);
-      font-weight: bolder;
-    }
+@media (max-width: 600px) {
+  .navmenu a {
+    padding: 12px;
+    font-size: 0.8rem;
   }
+  .navmenu a:hover,
+  .navmenu a:focus {
+    color: black;
+    text-decoration: none;
+  }
+  .navmenu {
+    background-color: rgb(121, 169, 98);
+    font-weight: bolder;
+  }
+}
 
 /* green border 
   green text  */
@@ -213,13 +276,13 @@ footer {
   }
 }
 
-@media (max-width: 600px){
-  main{
-    width:90%;
+@media (max-width: 600px) {
+  main {
+    width: 90%;
   }
 
-  section{
-    width:80%;
+  section {
+    width: 80%;
     padding: 2rem;
   }
 
@@ -239,18 +302,17 @@ footer {
     width: 80%;
     font-size: 1.5rem;
   }
- 
 }
 
 /* skills flex */
-@media (max-width: 600px){
-  #skills ul{
+@media (max-width: 600px) {
+  #skills ul {
     display: flex;
     flex-direction: column;
     width: 90%;
-    justify-self:center;
+    justify-self: center;
   }
-  #skills li{
+  #skills li {
     padding: 0.2rem 0.2rem;
     border-radius: 5px;
     margin-bottom: 0.5rem;
@@ -259,35 +321,66 @@ footer {
   }
 }
 
-@media (max-width: 600px){
+@media (max-width: 600px) {
   #connect ul {
     font-size: 1.5rem;
   }
 }
 
-/* ---------------phone view done-------------- */
+@media (max-width: 600px) {
+  form input,
+  form textarea {
+    font-size: 2rem;
+    width: 80%;
+  }
+  form input {
+    height: 30px;
+  }
+  textarea {
+    height: 200px;
+  }
+  form button {
+    font-size: 1.5rem;
+  }
 
+  /* messages */
+  #messages li {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .message-content {
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+  }
+  #messages li button {
+    padding: 5px 10px;
+    margin: 10px auto;
+  }
+}
+
+/* ---------------phone view done-------------- */
 
 /* ---------------tablet view--------------------- */
 
 /* pink nav bar */
-  @media (min-width: 601px) and (max-width: 850px) {
-    .navmenu a {
-      padding: 12px;
-      font-size: 1.5rem;
-    }
-    .navmenu a:hover,
-    .navmenu a:focus {
-      color: rgb(55, 63, 52);
-      text-decoration:none;
-    }
-    .navmenu {
-      background-color: rgb(220, 174, 174);
-      font-weight: bolder;
-    }
+@media (min-width: 601px) and (max-width: 850px) {
+  .navmenu a {
+    padding: 12px;
+    font-size: 1.5rem;
   }
-  
- 
+  .navmenu a:hover,
+  .navmenu a:focus {
+    color: rgb(55, 63, 52);
+    text-decoration: none;
+  }
+  .navmenu {
+    background-color: rgb(220, 174, 174);
+    font-weight: bolder;
+  }
+}
+
 /* pink border 
   pink text*/
 @media (min-width: 601px) and (max-width: 850px) {
@@ -296,7 +389,7 @@ footer {
     padding: 1rem;
     border: dotted rgb(206, 180, 193) 15px;
     margin: 1rem auto;
-    width:75%;
+    width: 75%;
   }
   .mypic {
     max-width: 25%;
@@ -310,16 +403,16 @@ footer {
   }
 }
 
-@media (min-width: 601px) and (max-width: 850px){
-  main{
-    width:80%;
+@media (min-width: 601px) and (max-width: 850px) {
+  main {
+    width: 80%;
   }
 
-  section{
-    width:90%;
+  section {
+    width: 90%;
   }
 
-  #about p{
+  #about p {
     font-size: 2rem;
   }
 
@@ -330,24 +423,40 @@ footer {
   .column {
     width: 80%;
     margin: 0.5rem auto;
-    font-size: 2rem
+    font-size: 2rem;
   }
-
 }
 
-  /* skills flex */
-  @media (min-width: 601px) and (max-width: 850px){
-    #skills ul{
-      display: flex;
-      flex-direction: column;
-      width: 60%;
-      justify-self:center;
-    }
-    #skills li{
-      padding: 0.2rem 0.2rem;
-      border-radius: 5px;
-      margin-bottom: 0.5rem;
-      display: inline-block;
-    }
+/* skills flex */
+@media (min-width: 601px) and (max-width: 850px) {
+  #skills ul {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-self: center;
   }
- /* ----------------------tablet view done------------------*/
+  #skills li {
+    padding: 0.2rem 0.2rem;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+  }
+}
+
+/* form and messages*/
+@media (min-width: 601px) and (max-width: 850px) {
+  form label {
+    font-size: 2rem;
+  }
+
+  form input {
+    width: 60%;
+    height: 40px;
+  }
+  form button {
+    font-size: 1.5rem;
+  }
+}
+
+/* ----------------------tablet view done------------------*/
