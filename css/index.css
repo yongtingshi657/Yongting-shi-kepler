@@ -193,7 +193,7 @@ form button {
   padding: 10px 20px;
   margin: 10px auto;
   font-size: 1rem;
-  border: 1px solid balck;
+  border: 1px solid black;
   cursor: pointer;
 }
 form button:hover {
@@ -217,9 +217,9 @@ form button:hover {
 
 .message-content {
   display: flex;
-  gap: 15px; /* Space between name and message */
+  gap: 15px; 
   align-items: center;
-  flex: 1; /* Allow this section to grow and take up available space */
+  flex: 1; 
 }
 
 #messages li button {
