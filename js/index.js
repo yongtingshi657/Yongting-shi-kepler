@@ -25,3 +25,35 @@ for(let i = 0; i< skills.length; i++) {
     skillsList.appendChild(skill);
 }
 
+const messageForm = document.getElementsByName("leave_message")[0];
+
+messageForm.addEventListener("submit",(event)=>{
+    event.preventDefault();
+    let name = event.target.usersName.value;
+    let email = event.target.usersEmail.value;
+    let message = event.target.usersMessage.value;
+    console.log(name,email,message);
+
+    let messageSection = document.getElementById("messages");
+    let messageList = messageSection.querySelector("ul");
+    let newMessage = document.createElement("li");
+    newMessage.innerHTML = `
+        <div class="message-content">
+        <a href="mailto:${email}">${name}</a>
+        <span>${message}</span>
+        </div>`
+    
+    let removeButton = document.createElement("button");
+        removeButton.innerText ="remove";
+        removeButton.type = "button";
+    removeButton.addEventListener("click", ()=>{
+            let entry = removeButton.parentNode;
+            entry.remove();
+        })
+    
+    newMessage.appendChild(removeButton);
+
+    messageList.appendChild(newMessage);
+
+    messageForm.reset();
+})
