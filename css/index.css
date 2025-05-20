@@ -217,9 +217,9 @@ form button:hover {
 
 .message-content {
   display: flex;
-  gap: 15px; 
+  gap: 15px;
   align-items: center;
-  flex: 1; 
+  flex: 1;
 }
 
 #messages li button {
@@ -231,6 +231,26 @@ form button:hover {
 /* footer */
 footer {
   text-align: center;
+}
+
+/* projects */
+#projects ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  font-size: 2rem;
+}
+
+#projects a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+}
+
+#projects a:hover,
+#projects a:focus {
+  color: lightslategray;
 }
 
 /* ------------------desktop view done----------------- */
@@ -310,7 +330,6 @@ footer {
     display: flex;
     flex-direction: column;
     width: 90%;
-    justify-self: center;
   }
   #skills li {
     padding: 0.2rem 0.2rem;
@@ -321,12 +340,14 @@ footer {
   }
 }
 
+/* connects */
 @media (max-width: 600px) {
-  #connect ul {
+  #connect p,
+  ul {
     font-size: 1.5rem;
   }
 }
-
+/* forms */
 @media (max-width: 600px) {
   form input,
   form textarea {
@@ -357,6 +378,26 @@ footer {
   #messages li button {
     padding: 5px 10px;
     margin: 10px auto;
+  }
+}
+/* projecs */
+@media (max-width: 600px) {
+  #projects ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  #projects ul li {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    width: 90%;
+  }
+
+  #projects a {
+    font-size: 2rem;
   }
 }
 
@@ -430,17 +471,21 @@ footer {
 /* skills flex */
 @media (min-width: 601px) and (max-width: 850px) {
   #skills ul {
-    font-size: 2rem;
     display: flex;
-    flex-direction: column;
-    width: 60%;
-    justify-self: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    gap: 1rem;
   }
+
   #skills li {
-    padding: 0.2rem 0.2rem;
+    padding: 0.5rem 1.2rem;
     border-radius: 5px;
     margin-bottom: 0.5rem;
-    display: inline-block;
+    font-size: 2rem;
+    text-align: center;
   }
 }
 
@@ -458,5 +503,26 @@ footer {
     font-size: 1.5rem;
   }
 }
+/* projects */
+@media (min-width: 601px) and (max-width: 850px) {
+  #projects ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
 
+  #projects ul li {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    width: 80%;
+  }
+  #projects a {
+    font-size: 2rem;
+  }
+  #connect {
+    font-size: 2rem;
+  }
+}
 /* ----------------------tablet view done------------------*/
