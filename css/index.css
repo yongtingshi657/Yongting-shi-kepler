@@ -13,9 +13,10 @@ body {
             yellow nav bar*/
 .name-and-pic {
   display: flex;
-  align-items: center; /* vertically center the image with the text */
+  align-items: center; 
   justify-content: space-between;
   margin: 4rem auto 2rem;
+  padding: 1rem;
   width: 80%;
 }
 
@@ -26,7 +27,7 @@ body {
 }
 
 .name {
-  max-width: 60%;
+  max-width: 80%;
   color: rgb(246, 248, 163);
   font-size: 6rem;
   font-weight: 200;
@@ -85,6 +86,7 @@ section {
   border: 2px solid rgb(110, 182, 16);
   border-radius: 25px;
   text-align: center;
+  
 }
 
 h2 {
@@ -110,7 +112,7 @@ a {
 
 .columns {
   display: flex;
-  margin: auto;
+  margin: 1rem auto;
   justify-content: space-between;
   text-align: left;
   gap: 1rem;
@@ -125,6 +127,7 @@ a {
 
 /* skills section  */
 #skills ul {
+  margin: 1rem auto;
   list-style: none;
   display: flex;
   justify-content: center;
@@ -141,6 +144,7 @@ a {
   display: inline-block;
   margin-bottom: 0.5rem;
   margin-right: 1rem;
+  
 }
 
 /* connect section */
@@ -317,10 +321,12 @@ footer {
   .columns {
     display: flex;
     flex-direction: column;
+
   }
   .column {
     width: 80%;
     font-size: 1.5rem;
+    margin: 1rem auto;
   }
 }
 
@@ -329,15 +335,22 @@ footer {
   #skills ul {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 90%;
+    margin-right: 1rem;
   }
   #skills li {
     padding: 0.2rem 0.2rem;
     border-radius: 5px;
     margin-bottom: 0.5rem;
     display: inline-block;
+    width: 90%;
     font-size: 2rem;
+    text-align: center;
+    margin: auto;
   }
+   
 }
 
 /* connects */
@@ -386,8 +399,9 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 90%;
     padding: 0;
+    margin: 1rem auto;
   }
 
   #projects ul li {
