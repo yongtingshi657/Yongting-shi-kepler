@@ -1,3 +1,4 @@
+// footer 
 let footer = document.createElement("footer");
 
 document.body.appendChild(footer);
@@ -11,6 +12,7 @@ copyright.innerHTML = `\u00A9 Yongting Shi ${thisYear}`;
 
 footer.appendChild(copyright);
 
+// skills section
 let skills = ["JavaScript", "HTML", "CSS", "SQL", "Tableau", "GitHub"];
 
 let skillsSection = document.querySelector("#skills");
@@ -25,7 +27,9 @@ for (let i = 0; i < skills.length; i++) {
   skillsList.appendChild(skill);
 }
 
+// message
 const messageForm = document.getElementsByName("leave_message")[0];
+
 
 messageForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -35,6 +39,10 @@ messageForm.addEventListener("submit", (event) => {
   console.log(name, email, message);
 
   let messageSection = document.getElementById("messages");
+
+  // if there is message, display message section 
+  messageSection.style.display = "block";
+
   let messageList = messageSection.querySelector("ul");
   let newMessage = document.createElement("li");
   newMessage.innerHTML = `
@@ -58,6 +66,8 @@ messageForm.addEventListener("submit", (event) => {
   messageForm.reset();
 });
 
+
+// project-fatch from github
 fetch("https://api.github.com/users/yongtingshi657/repos")
   .then((response) => {
     if (!response.ok) {
