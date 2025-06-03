@@ -13,9 +13,10 @@ body {
             yellow nav bar*/
 .name-and-pic {
   display: flex;
-  align-items: center; /* vertically center the image with the text */
+  align-items: center; 
   justify-content: space-between;
   margin: 4rem auto 2rem;
+  padding: 1rem;
   width: 80%;
 }
 
@@ -26,7 +27,7 @@ body {
 }
 
 .name {
-  max-width: 60%;
+  max-width: 80%;
   color: rgb(246, 248, 163);
   font-size: 6rem;
   font-weight: 200;
@@ -85,6 +86,7 @@ section {
   border: 2px solid rgb(110, 182, 16);
   border-radius: 25px;
   text-align: center;
+  
 }
 
 h2 {
@@ -110,7 +112,7 @@ a {
 
 .columns {
   display: flex;
-  margin: auto;
+  margin: 1rem auto;
   justify-content: space-between;
   text-align: left;
   gap: 1rem;
@@ -124,23 +126,24 @@ a {
 }
 
 /* skills section  */
-#skills ul {
-  list-style: none;
+ #skills ul {
   display: flex;
   justify-content: center;
-  width: 90%;
   flex-wrap: wrap;
-  gap: 1rem;
-  box-sizing: border-box;
-}
+  width: 90%;
+  list-style: none;
+  font-size: 2rem;
+  gap:1rem;
+  padding: 0;
+  margin: 1rem auto;
+ }
 
 #skills li {
   background-color: lightgrey;
+  font-size: 1.5rem;
+  font-weight: bold;
   padding: 1rem 1rem;
   border-radius: 5px;
-  display: inline-block;
-  margin-bottom: 0.5rem;
-  margin-right: 1rem;
 }
 
 /* connect section */
@@ -217,9 +220,14 @@ form button:hover {
 
 .message-content {
   display: flex;
-  gap: 15px; 
+  gap: 15px;
   align-items: center;
-  flex: 1; 
+  flex: 1;
+}
+
+/* hide message section if there is no message*/
+#messages {
+  display: none;
 }
 
 #messages li button {
@@ -228,9 +236,31 @@ form button:hover {
   font-size: 1rem;
 }
 
+
+
 /* footer */
 footer {
   text-align: center;
+}
+
+/* projects */
+#projects ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  font-size: 2rem;
+}
+
+#projects a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+}
+
+#projects a:hover,
+#projects a:focus {
+  color: lightslategray;
 }
 
 /* ------------------desktop view done----------------- */
@@ -297,10 +327,12 @@ footer {
   .columns {
     display: flex;
     flex-direction: column;
+
   }
   .column {
     width: 80%;
     font-size: 1.5rem;
+    margin: 1rem auto;
   }
 }
 
@@ -309,24 +341,27 @@ footer {
   #skills ul {
     display: flex;
     flex-direction: column;
-    width: 90%;
-    justify-self: center;
+    justify-content: center;
   }
   #skills li {
     padding: 0.2rem 0.2rem;
     border-radius: 5px;
-    margin-bottom: 0.5rem;
-    display: inline-block;
+    width: 90%;
     font-size: 2rem;
+    text-align: center;
+    margin: auto;
   }
+   
 }
 
+/* connects */
 @media (max-width: 600px) {
-  #connect ul {
+  #connect p,
+  ul {
     font-size: 1.5rem;
   }
 }
-
+/* forms */
 @media (max-width: 600px) {
   form input,
   form textarea {
@@ -357,6 +392,27 @@ footer {
   #messages li button {
     padding: 5px 10px;
     margin: 10px auto;
+  }
+}
+/* projecs */
+@media (max-width: 600px) {
+  #projects ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    padding: 0;
+    margin: 1rem auto;
+  }
+
+  #projects ul li {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    width: 90%;
+  }
+
+  #projects a {
+    font-size: 2rem;
   }
 }
 
@@ -430,17 +486,21 @@ footer {
 /* skills flex */
 @media (min-width: 601px) and (max-width: 850px) {
   #skills ul {
-    font-size: 2rem;
     display: flex;
-    flex-direction: column;
-    width: 60%;
-    justify-self: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    gap: 1rem;
   }
+
   #skills li {
-    padding: 0.2rem 0.2rem;
+    padding: 0.5rem 1.2rem;
     border-radius: 5px;
     margin-bottom: 0.5rem;
-    display: inline-block;
+    font-size: 2rem;
+    text-align: center;
   }
 }
 
@@ -458,5 +518,26 @@ footer {
     font-size: 1.5rem;
   }
 }
+/* projects */
+@media (min-width: 601px) and (max-width: 850px) {
+  #projects ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
 
+  #projects ul li {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    width: 80%;
+  }
+  #projects a {
+    font-size: 2rem;
+  }
+  #connect {
+    font-size: 2rem;
+  }
+}
 /* ----------------------tablet view done------------------*/
